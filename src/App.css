@@ -1,38 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;700&display=swap");
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+  background: rgb(233, 242, 250);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
+  font-family: "Poppins", sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p {
+  margin-top: 0;
+  margin-bottom: 12px;
 }
-
-.App-link {
-  color: #61dafb;
+* {
+  box-sizing: border-box;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tablist.active {
+  background-color: var(--2nd-color);
+  border-radius: 1em;
 }
+.tablist.active svg {
+  color: #fff;
+}
+.tablist.active span {
+  color: #fff;
+}
+.tablist.active::after {
+  /* position: absolute;
+  content: "";
+  border-top: 1em solid #f97316;
+  border-right: 1em solid transparent;
+  border-left: 1em solid transparent;
+  border-bottom: -1em solid #f97316;
+  bottom: -1em; */
+}
+/* .layer {
+  background-color: rgba(0, 0, 0, 0.5);
+} */

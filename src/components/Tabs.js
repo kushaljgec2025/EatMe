@@ -49,12 +49,12 @@ function Tabs(props) {
     var cnt = 0;
     return (
         <div className="container">
-            <h1 className='recipeHeading text-mid m-4 text-[1.5em] font-thin'>What would you like to have!</h1>
+            <h1 className='recipeHeading text-mid m-4 text-[1.5em] font-semibold  '>What would you like to have!</h1>
             <div className="tabs flex gap-2 justify-center mr-[1em] ml-[1em]">
                 {
                     tabLabel.map((item, index) => (
 
-                        <div onClick={() => (handelClick(item.name, item.id), props.setLoader(true))} key={index} className={`tablist ${active === item.name ? 'active text-[1em] font-bold' : ''}  p-4  cursor-pointer  w-[7em] h-[5em] flex flex-col justify-center gap-2 content-center`}>
+                        <div onClick={() => (handelClick(item.name, item.id), props.setLoader(true))} key={index} className={`tablist shadow-[8px_-12px_49px_0px_#cbd5e0] ${active === item.name ? 'active text-[1em] font-bold shadow-[8px_-12px_39px_7px_#cbd5e0]' : ''}  p-4  cursor-pointer   w-[7em] h-[5em] flex flex-col justify-center gap-2 content-center`}>
                             <div className='text-[2em] m-auto'>
                                 {item.icon}
                             </div>
@@ -67,7 +67,7 @@ function Tabs(props) {
 
 
             </div>
-            <div className='recipe_banner bg-deep p-5 flex flex-col-reverse gap-[1em] m-[auto] lg:flex-row w-[100vw]  text-white mt-3'>
+            <div className='recipe_banner bg-deep p-5 flex flex-col-reverse gap-[1em] m-[auto] lg:flex-row w-[100%]  text-white mt-3'>
                 {
                     tabData !== "" &&
                     <>

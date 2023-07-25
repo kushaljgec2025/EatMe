@@ -11,6 +11,7 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0 auto;
   background: rgb(233, 242, 250);
+  box-sizing: border-box;
 }
 h1,
 h2,
@@ -29,25 +30,28 @@ p {
 * {
   box-sizing: border-box;
 }
+.tablist {
+  border-radius: 0.5em;
+}
 .tablist.active {
   background-color: var(--2nd-color);
-  border-radius: 1em;
 }
 .tablist.active svg {
   color: #fff;
+  transform: scale(1.3);
 }
 .tablist.active span {
   color: #fff;
 }
-.tablist.active::after {
-  /* position: absolute;
+/* .tablist.active::after { */
+/* position: absolute;
   content: "";
   border-top: 1em solid #f97316;
   border-right: 1em solid transparent;
   border-left: 1em solid transparent;
   border-bottom: -1em solid #f97316;
   bottom: -1em; */
-}
+/* } */
 /* .layer {
   background-color: rgba(0, 0, 0, 0.5);
 } */

@@ -1,3 +1,8 @@
+![Screenshot 2023-07-26 121750](https://github.com/kushaljgec2025/foodzone/assets/108950724/d90f91ec-e361-46a2-8895-f42af9c7a0d9)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

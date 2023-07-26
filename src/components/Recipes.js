@@ -16,8 +16,6 @@ function Recipe(props) {
         fetchData(query).then((response) => {
             setData(response);
             props.setLoader(false);
-
-
             console.log(response);
         })
     }, [searchedTearm])
@@ -34,7 +32,7 @@ function Recipe(props) {
                     <button onClick={() => (searchRecipe(searchedTearm), props.setLoader(true))} className="w-[5%] cursor-pointer bg-mid min-w-[2em]   rounded-br-md rounded-tr-md "  >< BsSearch className="m-auto text-white" /></button>
                 </div>
             </div>
-            <div className='flexbox w-[100%] flex flex-wrap justify-center gap-3'>
+            <div className='flexbox w-[100%] flex flex-wrap justify-center gap-3 '>
                 {
                     data && data.hits.map((item, index) => (
                         <div key={index} className='flexItem  shadow-lg bg-white rounded-lg w-[15em]  overflow-hidden   m-2'>

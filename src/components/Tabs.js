@@ -50,15 +50,15 @@ function Tabs(props) {
     return (
         <div className="container">
             <h1 className='recipeHeading text-mid m-4 text-[1.5em] font-semibold  '>What would you like to have!</h1>
-            <div className="tabs flex gap-2 justify-center mr-[1em] ml-[1em]">
+            <div className="tabs flex justify-center mr-[1em] ml-[1em]">
                 {
                     tabLabel.map((item, index) => (
 
-                        <div onClick={() => (handelClick(item.name, item.id), props.setLoader(true))} key={index} className={`tablist shadow-[8px_-12px_49px_0px_#cbd5e0] ${active === item.name ? 'active text-[1em] font-bold shadow-[8px_-12px_39px_7px_#cbd5e0]' : ''}  p-4  cursor-pointer   w-[7em] h-[5em] flex flex-col justify-center gap-2 content-center`}>
+                        <div onClick={() => (handelClick(item.name, item.id), props.setLoader(true))} key={index} className={`tablist shadow-[8px_-12px_49px_0px_#cbd5e0] ${active === item.name ? 'active text-[1em] font-bold shadow-[8px_-12px_39px_7px_#cbd5e0] w-[100%]' : ''}  p-4  cursor-pointer lg:min-w-[6em] w-[5em] h-[5em] flex flex-col text-mid justify-center gap-2 content-center m-[1vw]`}>
                             <div className='text-[2em] m-auto'>
                                 {item.icon}
                             </div>
-                            <span className="text-[0.8em]">{item.name}</span>
+                            <span className="text-[0.8em] m-auto">{item.name}</span>
                         </div>
 
                     ))
@@ -67,20 +67,20 @@ function Tabs(props) {
 
 
             </div>
-            <div className='recipe_banner bg-deep p-5 flex flex-col-reverse gap-[1em] m-[auto] lg:flex-row w-[100%]  text-white mt-3'>
+            <div className='recipe_banner  rounded-t-xl bg-gradient-to-r from-cyan-500 to-blue-500 p-5 flex flex-col-reverse gap-[1em] m-[auto] lg:flex-row w-[100%]  text-white mt-3'>
                 {
                     tabData !== "" &&
                     <>
-                        <div className="left-col m-[auto] w-[70%]   ">
-                            <span className='badge bg-mid p-3 rounded-md mb-3 inline-block font-bold'>{(tabData.recipe.cuisineType[0]).toUpperCase()}</span>
+                        <div className="left-col m-[auto] w-[90%]  lg:w-[50%]  ">
+                            <span className='badge bg-mid border-[#8ae0ff] border-[1px] shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] p-3 rounded-md mb-3 inline-block font-bold'>{(tabData.recipe.cuisineType[0]).toUpperCase()}</span>
                             <h1 className="text-[2em] font-bold mb-2">{tabData.recipe.label}</h1>
                             <p><strong className="m-2">Recipe by:</strong><small>{tabData.recipe.source}</small></p>
                             <h3>Ingredients</h3>
-                            <div className='ingredients flex  justify-center list-none'>
-                                <ul className='flex flex-wrap  gap-2 justify-evenly mt-3 '>
+                            <div className='ingredients list-none'>
+                                <ul className='grid grid-flow-row-dense  gap-2 justify-evenly mt-3 '>
                                     {
                                         tabData.recipe.ingredientLines.map((item, index) => (
-                                            <li key={index} className='bg-mid rounded-md mb-3 inline-block text-[1em] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] p-4'><GiCheckMark size="18px" className='inline-block mr-2 text-light' /><span>{item}</span></li>
+                                            <li key={index} className='bg-mid rounded-md mb-3 inline-block text-[0.8em] shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] p-2'><GiCheckMark size="18px" className='inline-block mr-2 text-light' /><span>{item}</span></li>
 
                                         ))
                                     }
@@ -88,9 +88,9 @@ function Tabs(props) {
                                 </ul>
                             </div>
                         </div>
-                        <div className="right-col m-[auto] w-[30%] lg:w-[60%]  ">
+                        <div className="right-col m-[auto] w-[60%] lg:w-[60%]  ">
                             <div >
-                                <img className=' border-[5px] border-white rounded-lg bg-cover w-[100%] lg:w-[60%] m-auto shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] ' src={tabData.recipe.image} alt={tabData.recipe.label} />
+                                <img className=' border-[5px] border-white rounded-[50%] bg-cover w-[100%] lg:w-[60%] m-auto shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] ' src={tabData.recipe.image} alt={tabData.recipe.label} />
                             </div>
 
 

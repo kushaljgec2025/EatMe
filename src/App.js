@@ -8,7 +8,7 @@ function App() {
   const [loader, setLoader] = useState(false);
   return (
 
-    <div className="App">
+    <div className="App content-center">
       <Header />
       <Tabs setLoader={setLoader} />
       <Recipes setLoader={setLoader} />

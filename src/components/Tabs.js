@@ -48,13 +48,13 @@ function Tabs(props) {
     }, [])
     var cnt = 0;
     return (
-        <div className="container">
+        <div className="container w-auto  flex flex-col justify-center">
             <h1 className='recipeHeading text-mid m-4 text-[1.5em] font-semibold  '>What would you like to have!</h1>
-            <div className="tabs flex justify-center mr-[1em] ml-[1em]">
+            <div className="tabs flex justify-center ">
                 {
                     tabLabel.map((item, index) => (
 
-                        <div onClick={() => (handelClick(item.name, item.id), props.setLoader(true))} key={index} className={`tablist shadow-[8px_-12px_49px_0px_#cbd5e0] ${active === item.name ? 'active text-[1em] font-bold shadow-[8px_-12px_39px_7px_#cbd5e0] w-[100%]' : ''}  p-4  cursor-pointer lg:min-w-[6em] w-[5em] h-[5em] flex flex-col text-mid justify-center gap-2 content-center m-[1vw]`}>
+                        <div onClick={() => (handelClick(item.name, item.id), props.setLoader(true))} key={index} className={`tablist shadow-[8px_-12px_49px_0px_#cbd5e0] ${active === item.name ? 'active text-[1em] font-bold shadow-[8px_-12px_39px_7px_#cbd5e0] ' : ''}  p-4  cursor-pointer lg:min-w-[6em] w-[5em] h-[5em] flex flex-col text-mid justify-center gap-2 content-center m-[1vw]`}>
                             <div className='text-[2em] m-auto'>
                                 {item.icon}
                             </div>
@@ -67,7 +67,7 @@ function Tabs(props) {
 
 
             </div>
-            <div className='recipe_banner  rounded-t-xl bg-gradient-to-r from-cyan-500 to-blue-500 p-5 flex flex-col-reverse gap-[1em] m-[auto] lg:flex-row w-[100%]  text-white mt-3'>
+            <div className='recipe_banner  rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 p-5 flex flex-col-reverse  gap-[1em] m-[auto] lg:flex-row  text-white mt-3'>
                 {
                     tabData !== "" &&
                     <>
@@ -90,7 +90,7 @@ function Tabs(props) {
                         </div>
                         <div className="right-col m-[auto] w-[60%] lg:w-[60%]  ">
                             <div >
-                                <img className=' border-[5px] border-white rounded-[50%] bg-cover w-[100%] lg:w-[60%] m-auto shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] ' src={tabData.recipe.image} alt={tabData.recipe.label} />
+                                <img className=' border-[5px] border-white rounded-[50%] bg-cover  lg:w-[60%] m-auto shadow-[rgba(0,_0,_0,_0.2)_0px_30px_90px] ' src={tabData.recipe.image} alt={tabData.recipe.label} />
                             </div>
 
 

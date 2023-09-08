@@ -24,15 +24,15 @@ function Recipe(props) {
 
 
     return (
-        <div className='container w-[100%]'>
-            <div className='heading-line w-[100%] p-8 text-[1.5em] mb-5 text-center text-mid '>
+        <div className='container '>
+            <div className='heading-line p-8 text-[1.5em] mb-5 text-center text-mid '>
                 <strong  >Search Recipes</strong>
                 <div className='input-wrapper flex  justify-center h-10 mt-3' >
                     <input type="text" onChange={(e) => setSearchedTearm(e.target.value)} value={searchedTearm} placeholder='Search Your Recipe' className="w-[45%] min-w-[10em]  pl-3 text-mid focus:border-mid outline-none border-light border-2 rounded-bl-md rounded-tl-md" />
                     <button onClick={() => (searchRecipe(searchedTearm), props.setLoader(true))} className="w-[5%] cursor-pointer bg-mid min-w-[2em]   rounded-br-md rounded-tr-md "  >< BsSearch className="m-auto text-white" /></button>
                 </div>
             </div>
-            <div className='flexbox w-[100%] flex flex-wrap justify-center gap-3 '>
+            <div className='flexbox flex flex-wrap justify-center gap-3 '>
                 {
                     data && data.hits.map((item, index) => (
                         <div key={index} className='flexItem  shadow-lg bg-white rounded-lg w-[15em]  overflow-hidden   m-2'>

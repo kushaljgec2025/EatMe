@@ -6,7 +6,7 @@ function Header() {
     return (
         <div className='header bg-no-repeat bg-center w-auto  bg-cover mb-1' style={{ backgroundImage: `url(https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=auto&q=80)` }}>
             <div className='layer bg-black/[0.5] rounded-b-xl'>
-                <div className="container">
+                <div className="container m-auto">
                     <nav className='logo-wrapper p-1 flex justify-center '>
 
                         <div className='logo border-[10px] ring-1 hover:ring-4 transition-all duration:1000   rounded-[50%] bg-gradient-to-r from-cyan-500 from-30% to-blue-500    p-3 cursor-pointer mt-2'>

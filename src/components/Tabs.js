@@ -48,7 +48,7 @@ function Tabs(props) {
     }, [])
     var cnt = 0;
     return (
-        <div className="container w-auto  flex flex-col justify-center">
+        <div className="container w-auto  m-auto flex flex-col justify-center">
             <h1 className='recipeHeading text-mid m-4 text-[1.5em] font-semibold  '>What would you like to have!</h1>
             <div className="tabs flex justify-center ">
                 {

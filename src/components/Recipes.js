@@ -24,7 +24,7 @@ function Recipe(props) {
 
 
     return (
-        <div className='container '>
+        <div className='container m-auto '>
             <div className='heading-line p-8 text-[1.5em] mb-5 text-center text-mid '>
                 <strong  >Search Recipes</strong>
                 <div className='input-wrapper flex  justify-center h-10 mt-3' >
